@@ -1,0 +1,33 @@
+@import './font'
+@import './fit'
+@import './reset'
+@import './color'
+
+body
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+#app
+  overflow hidden
+  min-height 100vh
+  background darken(c-bgc ,5%)
+  color white
+  text-align center
+header
+footer
+  background c-bgc
+  display flex
+  align-items center
+  justify-content flex-start
+header
+  height 4rem
+  border-bottom 0.5rem solid lighten(c-bgc ,4%)
+footer
+  position absolute
+  left 0
+  right 0
+  bottom 0
+  height 3rem
+  color darken(c-font, 15%)
+  font-size 0.7rem
+  
