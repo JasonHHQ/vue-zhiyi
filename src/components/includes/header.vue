@@ -35,7 +35,9 @@ export default {
     margin-left 5rem
     li
       width 4rem
+      cursor pointer
       border-top 0.2rem solid transparent
+      transition border-top-color 0.8s ease
       &.z-link-active
         border-top-color c-link-active
 </style>
