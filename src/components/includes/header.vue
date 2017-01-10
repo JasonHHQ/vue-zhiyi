@@ -20,30 +20,41 @@ export default {
 <style lang="stylus" scoped>
   @import '../../assets/stylus/color'
   .logo
+    position absolute
     display flex
     flex-direction row
     align-items center
-    padding 0 1.5rem
-    font-size 1.4rem
-    font-weight 400
     height inherit
+    padding 0 1rem
+    margin-left 8rem
+    font-size 1.3rem
+    font-weight 400
+    @media (max-width: 767px)
+      margin-left 0.5rem
     img
       display none
-      height 2.5rem
+      height 2rem
       margin-right .5rem
       .light &.white
       .dark &.black
         display block
   .menu
     display flex
+    flex-direction row
+    justify-content flex-end
+    margin-right 9rem
+    width 100%
     height inherit
     line-height @height
-    margin-left 5rem
     li
-      padding 0 1.5rem
+      padding 0 2rem
       cursor pointer
       border-top 0.2rem solid transparent
       transition border-top-color 0.8s ease
       &.z-link-active
         border-top-color c-link-active
+    @media (max-width: 767px)
+      margin-right 1.5rem
+      li
+        padding 0 1rem
 </style>

@@ -8,12 +8,17 @@ export default {
   name: 'demo',
   data () {
     return {
+      theme: 'dark'
     }
+  },
+  mounted () {
+    this.$emit('get-theme', this.theme)
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style lang="stylus" scoped>
+  .demo
+    margin-top 7vh
 </style>

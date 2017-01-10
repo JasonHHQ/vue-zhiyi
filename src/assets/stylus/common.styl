@@ -15,27 +15,23 @@ body
   height @min-height
   height auto
   text-align center
-  .light&
-    background c-bgc-l
-    color c-font-l
-  .dark&
-    background c-bgc-d
-    color c-font-d
+  background c-white
+  color c-font-l
   header
+    position absolute
+    left 0
+    right 0
     display flex
     align-items center
     justify-content flex-start
+    z-index 300
+    height 7vh
+    line-height 6vh
     .light&
-      background c-h-l
+      background transparent
       color c-hfont-l
     .dark&
       background c-h-d
       color c-hfont-d
-  header
-    height 8vh
-    line-height @height
-    .light&
-      border-bottom (@height/8) solid lighten(c-h-l ,40%)
-    .dark&
-      border-bottom (@height/8) solid lighten(c-h-d ,40%)
+    
   

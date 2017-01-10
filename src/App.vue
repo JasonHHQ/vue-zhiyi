@@ -1,9 +1,9 @@
 <template lang="pug">
-  #app.dark
+  #app(:class="theme")
     app-header
     main
       transition(name="cadeFade")
-        router-view
+        router-view(@get-theme="getTheme")
 </template>
 
 <script>
@@ -12,7 +12,18 @@
     name: 'app',
     components: {
       AppHeader
+    },
+    data () {
+      return {
+        theme: 'dark'
+      }
+    },
+    methods: {
+      getTheme (msg) {
+        this.theme = msg
+      }
     }
+
   }
 </script>
 
@@ -30,6 +41,6 @@
     transform scale(.96, 0.92)
     opacity 0
   .cadeFade-leave-active
-    transform translateY(5%) scale(.96, 0.96)
+    transform translateY(5%) scale(.96, 0.92)
     opacity 0
 </style>
