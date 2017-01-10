@@ -4,30 +4,38 @@
 @import './color'
 
 body
-  font-family 'Avenir', Helvetica, Arial, sans-serif
+  font-family proxima-dova, Helvetica, 'Microsoft Yahei Light', 'Microsoft Yahei', Arial, sans-serif
+  font-weight 400
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
+  overflow-x hidden
 #app
   overflow hidden
   min-height 100vh
-  background darken(c-bgc ,5%)
-  color white
+  height @min-height
+  height auto
   text-align center
-header
-footer
-  background c-bgc
-  display flex
-  align-items center
-  justify-content flex-start
-header
-  height 4rem
-  border-bottom 0.5rem solid lighten(c-bgc ,4%)
-footer
-  position absolute
-  left 0
-  right 0
-  bottom 0
-  height 3rem
-  color darken(c-font, 15%)
-  font-size 0.7rem
+  .light&
+    background c-bgc-l
+    color c-font-l
+  .dark&
+    background c-bgc-d
+    color c-font-d
+  header
+    display flex
+    align-items center
+    justify-content flex-start
+    .light&
+      background c-h-l
+      color c-hfont-l
+    .dark&
+      background c-h-d
+      color c-hfont-d
+  header
+    height 8vh
+    line-height @height
+    .light&
+      border-bottom (@height/8) solid lighten(c-h-l ,40%)
+    .dark&
+      border-bottom (@height/8) solid lighten(c-h-d ,40%)
   

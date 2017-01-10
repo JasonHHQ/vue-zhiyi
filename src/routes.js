@@ -1,6 +1,6 @@
 const routes = [
   {
-    name: 'Index',
+    name: 'Hello',
     path: '/',
     component: require('./components/Hello.vue')
   },

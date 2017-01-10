@@ -18,7 +18,7 @@ router.beforeEach((to, from, next) => {
   //   titleStr += `${k > 0 ? '- ' : ''}${match.meta.title} `
   // })
   // tips： 直接翻转数组会导致路由嵌套位置的翻转
-  if (to.name !== 'Index') {
+  if (to.name !== 'Hello') {
     for (let i = to.matched.length - 1; i >= 0; i--) {
       titleStr += `${to.matched[i].meta.title} - `
     }

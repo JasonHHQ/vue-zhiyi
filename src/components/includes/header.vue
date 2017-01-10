@@ -1,7 +1,8 @@
 <template lang="pug">
   header
     router-link(to="/").logo
-      img(src="../../assets/images/logo-zhiyi.png", alt="")
+      img.black(src="../../assets/images/logo-zhiyi-black.png", alt="")
+      img.white(src="../../assets/images/logo-zhiyi-white.png", alt="")
       | ZHIYI
     ul.menu
       router-link(to="/home" tag="li") home
@@ -22,19 +23,24 @@ export default {
     display flex
     flex-direction row
     align-items center
-    width 5.5rem
+    padding 0 1.5rem
+    font-size 1.4rem
+    font-weight 400
     height inherit
     img
+      display none
       height 2.5rem
-      margin-left 1.5rem
       margin-right .5rem
+      .light &.white
+      .dark &.black
+        display block
   .menu
     display flex
-    height 4rem
+    height inherit
     line-height @height
     margin-left 5rem
     li
-      width 4rem
+      padding 0 1.5rem
       cursor pointer
       border-top 0.2rem solid transparent
       transition border-top-color 0.8s ease

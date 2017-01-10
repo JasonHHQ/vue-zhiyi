@@ -1,24 +1,9 @@
-<template>
-  <div class="hello">
-    <img src="../assets/images/logo-vue.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
-  </div>
+<template lang="pug">
+  .hello
+    img
+    .text-content
+      .title Learn and know
+      .text Wellcom to the homepage of zhiyi
 </template>
 
 <script>
@@ -33,22 +18,39 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+<style lang="stylus" scoped>
+  @import '../assets/stylus/color'
+  .hello
+    width 100%
+    height 91vh
+    img
+      width 100%
+      height 100%
+      background url('../assets/images/home.jpg') no-repeat
+      background-size 100% 100%
+      @media (max-width: 767px)
+        background url('../assets/images/home-mobile.jpg') no-repeat
+        background-size 100% 100%
+    .text-content
+      position absolute
+      bottom 0
+      width inherit
+      height inherit
+      display flex
+      flex-direction column
+      justify-content center
+      background rgba(c-yellow, 0.15)
+      font-weight 300
+      .title
+        color darken(c-white, 6%)
+        font-size 5rem
+        margin-bottom 1rem
+      .text 
+        color darken(c-white, 6%)
+        font-size 2rem
+      @media (max-width: 767px)
+        .title
+            font-size 3.5rem
+        .text 
+            font-size 1.5rem
 </style>
