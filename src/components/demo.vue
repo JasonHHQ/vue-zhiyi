@@ -12,7 +12,7 @@ export default {
     }
   },
   mounted () {
-    this.$emit('get-theme', this.theme)
+    this.$emit('app-theme', this.theme)
   }
 }
 </script>
@@ -20,5 +20,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
   .demo
-    margin-top 7vh
+    position absolute
+    left 0
+    right 0
+    top 7vh
 </style>

@@ -3,7 +3,7 @@
     app-header
     main
       transition(name="cadeFade")
-        router-view(@get-theme="getTheme")
+        router-view(@app-theme="getTheme")
 </template>
 
 <script>
@@ -31,16 +31,15 @@
   @import './assets/stylus/common'
   .cadeFade-enter-active,
   .cadeFade-leave-active
-    overflow hidden
     position absolute
     left 0
     right 0
     opacity 1
     transition all 1s cubic-bezier(0.66, 0.1, 0.38, 1.45)
   .cadeFade-enter
-    transform scale(.96, 0.92)
+    transform translateY(7vh) 
     opacity 0
   .cadeFade-leave-active
-    transform translateY(5%) scale(.96, 0.92)
+    transform translateY(10vh) 
     opacity 0
 </style>

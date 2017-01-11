@@ -18,7 +18,7 @@ body
   background c-white
   color c-font-l
   header
-    position absolute
+    position fixed
     left 0
     right 0
     display flex
@@ -30,8 +30,18 @@ body
     .light&
       background transparent
       color c-hfont-l
+      transition all 0.5s ease
     .dark&
       background c-h-d
       color c-hfont-d
+      box-shadow 0 1px 6px lighten(c-forceblue, 3%)
+      animation movedown 0.5s ease
+    @keyframes movedown
+      from
+        transform translateY(-7vh)
+      to 
+        transform translateY(0vh)
+        
+        
     
   

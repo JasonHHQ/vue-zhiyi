@@ -20,7 +20,6 @@ export default {
 <style lang="stylus" scoped>
   @import '../../assets/stylus/color'
   .logo
-    position absolute
     display flex
     flex-direction row
     align-items center
