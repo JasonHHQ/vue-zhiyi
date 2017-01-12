@@ -3,24 +3,31 @@
     app-header
     main
       transition(name="cadeFade")
-        router-view(@app-theme="getTheme")
+        router-view(@app-theme="getTheme", @foot-theme="getFootTheme")
+    app-footer(:foot-theme="footTheme")
 </template>
 
 <script>
   import AppHeader from './components/includes/header.vue'
+  import AppFooter from './components/includes/footer.vue'
   export default {
     name: 'app',
     components: {
-      AppHeader
+      AppHeader,
+      AppFooter
     },
     data () {
       return {
-        theme: 'dark'
+        theme: 'dark',
+        footTheme: 'dark'
       }
     },
     methods: {
       getTheme (msg) {
         this.theme = msg
+      },
+      getFootTheme (msg) {
+        this.footTheme = msg
       }
     }
 
@@ -37,9 +44,14 @@
     opacity 1
     transition all 1s cubic-bezier(0.66, 0.1, 0.38, 1.45)
   .cadeFade-enter
-    transform translateY(7vh) 
+    transform translateY(3.5rem) 
     opacity 0
   .cadeFade-leave-active
-    transform translateY(10vh) 
+    transform translateY(7rem) 
     opacity 0
+  @media (max-width: 767px)
+    .cadeFade-enter
+      transform translateY(1rem) 
+    .cadeFade-leave-active
+      transform translateY(1.5rem) 
 </style>

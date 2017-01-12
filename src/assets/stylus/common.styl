@@ -8,7 +8,6 @@ body
   font-weight 400
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  overflow-x hidden
 #app
   overflow hidden
   min-height 100vh
@@ -25,8 +24,8 @@ body
     align-items center
     justify-content flex-start
     z-index 300
-    height 7vh
-    line-height 6vh
+    height 3.5rem
+    line-height @height
     .light&
       background transparent
       color c-hfont-l
@@ -38,10 +37,24 @@ body
       animation movedown 0.5s ease
     @keyframes movedown
       from
-        transform translateY(-7vh)
+        transform translateY(-3.5rem)
       to 
         transform translateY(0vh)
-        
-        
-    
-  
+  main
+    min-height 100vh
+    &>div
+      padding-top 3.5rem
+      overflow hidden
+  footer
+    width 100%
+    font-size 0.7rem
+    height 4rem
+    margin-top -4rem
+    &.light
+      .footer-main
+        border-top 1px solid #9b9b9b
+        color c-font-d
+    &.dark
+      .footer-main
+        border-top 1px solid #ececec
+        color c-font-l

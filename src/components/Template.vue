@@ -1,11 +1,11 @@
 <template lang="pug">
-  .demo
-    h1 demo page 字體
+  .simple
+    | Simple
 </template>
 
 <script>
 export default {
-  name: 'demo',
+  name: 'template',
   data () {
     return {
       theme: 'dark'
@@ -20,4 +20,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
+  .simple
+    line-height 40vh
 </style>

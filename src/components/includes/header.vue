@@ -5,8 +5,9 @@
       img.white(src="../../assets/images/logo-zhiyi-white.png", alt="")
       | ZHIYI
     ul.menu
-      router-link(to="/home" tag="li") home
-      router-link(to="/demo" tag="li") demo
+      router-link(to="/demo" tag="li") Demo
+      router-link(to="/font" tag="li") Font
+      router-link(to="/hello" tag="li") Vue
 </template>
 
 <script>
@@ -32,7 +33,7 @@ export default {
       margin-left 0.5rem
     img
       display none
-      height 2rem
+      width 2rem
       margin-right .5rem
       .light &.white
       .dark &.black
