@@ -40,16 +40,18 @@ body
         transform translateY(-3.5rem)
       to 
         transform translateY(0vh)
+  f-h = 4rem
   main
     min-height 100vh
+    margin-bottom -(f-h)
     &>div
-      padding-top 3.5rem
+      width 100%
+      padding f-h 0
       overflow hidden
   footer
     width 100%
     font-size 0.7rem
-    height 4rem
-    margin-top -4rem
+    height f-h
     &.light
       .footer-main
         border-top 1px solid #9b9b9b

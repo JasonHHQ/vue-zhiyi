@@ -61,11 +61,13 @@ export default {
     this.$emit('app-theme', this.theme)
     this.$emit('foot-theme', this.theme)
     window.addEventListener('scroll', this.handleScroll)
+    this.fetchData()
   },
   watch: {
     theme () {
       this.$emit('app-theme', this.theme)
-    }
+    },
+    '$route': 'fetchData'
   },
   methods: {
     handleScroll (e) {
@@ -74,6 +76,12 @@ export default {
       } else {
         this.theme = 'light'
       }
+    },
+    fetchData () {
+      this.$http.post('/test').then((res) => {
+        let data = res.data
+        console.log(data)
+      })
     }
   }
 }
@@ -98,7 +106,8 @@ function getPageScroll () {
 <style lang="stylus" scoped>
   @import '../assets/stylus/color'
   .home
-    padding-top 0!important
+    margin-top -4rem
+    margin-bottom -8rem
   .banner
     width 100%
     height 100vh
