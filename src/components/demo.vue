@@ -1,6 +1,6 @@
 <template lang="pug">
   .demo
-    h1 demo page 字體
+    h1 demo page
 </template>
 
 <script>
